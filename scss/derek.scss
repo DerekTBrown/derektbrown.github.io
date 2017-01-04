@@ -1,0 +1,93 @@
+/**
+ **  DEREKTBROWN.COM
+ **  STYLESHEETS
+ **  COPYRIGHT DEREK BROWN 2017
+ **/
+
+ /* FONTS */
+ .font-cursive{
+   font-family: 'Shadows Into Light', cursive;
+ }
+ .font-body{
+   font-family: 'Open Sans', sans-serif;
+ }
+
+ h1{
+   @extend .font-body;
+   font-size: 48pt;
+   font-weight: 700;
+   line-height:30pt;
+ }
+ h2{
+   @extend .font-cursive;
+   font-size: 26pt;
+   font-weight: 300;
+ }
+ h3{
+   @extend .font-body;
+   font-size: 22pt;
+   font-weight: 300;
+   line-height:20pt;
+ }
+
+ /* BODY */
+ body {
+   @extend .font-body;
+ }
+
+ /* HEADER */
+ section#welcome{
+   display: block;
+   min-height: 100vh;
+
+   div.left{
+     height:100vh;
+     background: #1E4875;
+
+     display: flex;
+     flex-direction: column;
+     flex-wrap: nowrap;
+     justify-content:space-between;
+     align-items:center;
+
+     div.message{
+       padding-top: 10vh;
+       padding-bottom: 10vh;
+       text-align: center;
+     }
+
+     div.headshot{
+       width: 80%;
+       height:70vh;
+
+       background: url('../img/derek.png');
+       background-size: contain;
+       background-repeat: no-repeat;
+       background-position: center bottom;
+     }
+
+   }
+
+   div.right{
+     height: 100vh;
+     background: linear-gradient(#fff, #ccc);
+   }
+ }
+
+ /* MENU */
+
+ /* RESUME */
+ section#resume{
+  display: block;
+  min-height: 1000px;
+
+    div.inner{
+      width: 100%;
+      max-width: 960px;
+
+      padding:20px 0px 20px 0px;
+
+      margin: 0 auto;
+      border: 1px solid #ccc;
+    }
+ }
