@@ -16,7 +16,7 @@
    @extend .font-body;
    font-size: 48pt;
    font-weight: 700;
-   line-height:30pt;
+   line-height:46pt;
  }
  h2{
    @extend .font-cursive;
@@ -35,59 +35,70 @@
    @extend .font-body;
  }
 
- /* HEADER */
- section#welcome{
-   display: block;
-   min-height: 100vh;
+ div#wrapper{
+   height: 100vh;
+ }
 
-   div.left{
-     height:100vh;
-     background: #1E4875;
 
-     display: flex;
-     flex-direction: column;
-     flex-wrap: nowrap;
-     justify-content:space-between;
-     align-items:center;
+ /* LEFT PORTION */
+ div.left{
+   height:100vh;
+   background: #1E4875;
 
-     div.message{
-       padding-top: 10vh;
-       padding-bottom: 10vh;
-       text-align: center;
-     }
+   animation-duration:1s;
 
-     div.headshot{
-       width: 80%;
-       height:70vh;
+   display: flex;
+   flex-direction: column;
+   flex-wrap: nowrap;
+   justify-content:space-between;
+   align-items:center;
 
-       background: url('../img/derek.png');
-       background-size: contain;
-       background-repeat: no-repeat;
-       background-position: center bottom;
-     }
-
+   div.message{
+     padding-top: 10vh;
+     text-align: center;
    }
 
-   div.right{
-     height: 100vh;
-     background: linear-gradient(#fff, #ccc);
+   div.social-bar{
+     padding-top: 10px;
+     padding-bottom: 8vh;
+
+     a i{
+       color: #0b233d;
+
+       margin:0 5px;
+       font-size: 22pt;
+       line-height:48pt;
+       text-align: center;
+
+       height: 48pt;
+       width: 48pt;
+       border-radius: 50%;
+
+       &:hover{
+         color:#fff;
+         background-color:#0b233d;
+       }
+     }
+   }
+
+   div.headshot{
+     width: 80%;
+     height:70vh;
+
+     background: url('../img/derek.png');
+     background-size: contain;
+     background-repeat: no-repeat;
+     background-position: center bottom;
    }
  }
 
- /* MENU */
+ /* RIGHT PORTION */
+ div.right{
+   height: 100vh;
+   padding-left:0px;
 
- /* RESUME */
- section#resume{
-  display: block;
-  min-height: 1000px;
+   .projects{
 
-    div.inner{
-      width: 100%;
-      max-width: 960px;
+   }
 
-      padding:20px 0px 20px 0px;
-
-      margin: 0 auto;
-      border: 1px solid #ccc;
-    }
  }
