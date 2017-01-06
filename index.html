@@ -13,6 +13,8 @@
     <!-- UIKit Import -->
     <link type="text/css" rel="stylesheet" href="lib/uikit/css/uikit.min.css" />
     <script type="text/javascript" src="lib/jquery/dist/jquery.min.js"></script>
+
+    <!-- JQuery -->
     <script type="text/javascript" src="lib/uikit/js/uikit.min.js" ></script>
 
     <!-- Styles Import -->
@@ -42,42 +44,97 @@
       }
     </script>
 
+    <!-- Modified Switcher -->
+    <script>
+      var prevTab = "";
+      function openTab(tab){
+        if (tab !== prevTab){
+          // Change uk-active
+          $("#menu > ul > li").removeClass("uk-active");
+          $("#menu > ul > li."+tab).addClass("uk-active");
+
+          // Change tabs
+          $("div#left > section, div#right > section").hide();
+          $("div#left > section."+tab+",div#right > section."+tab).css('display', 'flex');
+        }
+      }
+    </script>
+
   </head>
   <body>
+    <div class="uk-grid">
+      <div id="left" class="uk-width-1-1 uk-width-large-1-2">
 
-    <div id="wrapper" class="uk-grid">
-      <div class="left uk-width-1-1 uk-width-large-1-2">
-        <div class="message">
-          <h1 style="color:#fff;">
-             Derek Brown
-          </h1>
-          <h3 style="color:#fff;">
-            Strategy Analyst | Software Developer
-          </h3>
-        </div>
-        <div class="social-bar">
-          <a href="https://www.linkedin.com/in/derektbrown"><i class="uk-icon-linkedin"></i></a>
-          <a href="https://github.com/DerekTBrown"><i class="uk-icon-github"></i></a>
-          <a href="mailto:mail@derektbrown.com"><i class="uk-icon-envelope"></i></a>
-        </div>
-        <div class="headshot"></div>
+        <!-- Welcome Class -->
+        <section class="welcome">
+          <div class="message">
+            <h1 style="color:#fff;">
+               Derek Brown
+            </h1>
+            <h2 style="color:#fff;" class="uk-visible-small">
+              Strategy Analyst <br>
+              <span style="font-size: 0.8em">and</span> <br>
+              Software Developer
+            </h2>
+            <h2 style="color:#fff;" class="uk-hidden-small">
+              Strategy Analyst | Software Developer
+            </h2>
+          </div>
+          <div class="social-bar">
+            <a href="https://www.linkedin.com/in/derektbrown"><i class="uk-icon-linkedin"></i></a>
+            <a href="https://github.com/DerekTBrown"><i class="uk-icon-github"></i></a>
+            <a href="mailto:mail@derektbrown.com"><i class="uk-icon-envelope"></i></a>
+          </div>
+          <div class="headshot uk-hidden-small"></div>
+        </section>
+
+        <!-- Background Class -->
+
+        <!-- Projects Class -->
+
+
       </div><!-- .left -->
 
-      <div class="right uk-width-1-1 uk-width-large-1-2">
+      <div id="right" class="uk-width-1-1 uk-width-large-1-2">
 
-          <!-- Projects -->
-          <h3> Projects </h3>
-          <div class="uk-grid">
-            <div class="uk-width-1-1 uk-width-medium-1-2">
-              <img src="http://lorempixel.com/320/180/" />
-            </div>
+        <!-- MENU -->
+        <div id="menu" class="uk-hidden">
+          <ul class="uk-subnav uk-subnav-pill" style="margin-top: 30px;" >
+              <li class="uk-active welcome"><a onClick="openTab('welcome')">Hello!</a></li>
+              <li class="background"><a onClick="openTab('background')">Background</a></li>
+              <li class="projects"><a onClick="openTab('projects')">Projects</a></li>
+          </ul>
+        </div>
+
+        <!-- Welcome Class -->
+        <section class="welcome">
+          <div>
+            <h3>Hello!</h3>
+            I am a student at <b>Carnegie Mellon University</b>
+            studyingComputer Science.  I have a passion for Technology Stategy
+            and Policy, which I apply to my work as a <b> Corporate Stategy </b>
+            at <b>Red Hat</b>. I love to share my passion for Technology, and founded
+            the <b> TuxLab Project </b>, a web platform to teach students how
+            to use Linux.  Away from the keyboard, I am a Rescue Diver, Amateur Radio Operator
+            and Beatboxer.
+            <br><br>
+            Nice to meet you!
+            <br><br>
+            <h2 style="font-size:180%; line-height:50%;">Derek</h2>
+            <br><br>
+            <button class="uk-button uk-button-large" type="button" onClick="downloadResume()"><i class="uk-icon-download"></i> &nbsp; RESUME</button>
           </div>
+        </section>
 
-        </div> <!-- .projects -->
+        <!-- Background Class -->
+        <section class="projects">
+          <div>
+
+          </div>
+        </section>
 
       </div> <!-- .right -->
-
-    </div> <!-- .wrapper -->
+    </div> <!-- .uk-grid -->
 
   </body>
 </html>

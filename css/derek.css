@@ -7,44 +7,45 @@
 .font-cursive, h2 {
   font-family: 'Shadows Into Light', cursive; }
 
-.font-body, h1, h3, body {
+.font-body, h1, h3, body, div#right div#menu, div#right section {
   font-family: 'Open Sans', sans-serif; }
 
 h1 {
-  font-size: 48pt;
+  font-size: 480%;
   font-weight: 700;
-  line-height: 46pt; }
+  line-height: 1em; }
 
 h2 {
-  font-size: 26pt;
-  font-weight: 300; }
+  font-size: 280%;
+  font-weight: 300;
+  line-height: 1.1em; }
 
 h3 {
-  font-size: 22pt;
-  font-weight: 300;
-  line-height: 20pt; }
+  font-size: 220%;
+  font-weight: 300; }
 
 /* BODY */
-div#wrapper {
-  height: 100vh; }
-
-/* LEFT PORTION */
-div.left {
+/* SPLIT FORMAT */
+div#left section, div#right section {
   height: 100vh;
-  background: #1E4875;
-  animation-duration: 1s;
-  display: flex;
+  display: none;
   flex-direction: column;
   flex-wrap: nowrap;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center; }
-  div.left div.message {
+  div#left section.welcome, div#right section.welcome {
+    display: flex; }
+
+/* LEFT SIDE */
+div#left section.welcome {
+  background: #1E4875; }
+  div#left section.welcome div.message {
     padding-top: 10vh;
     text-align: center; }
-  div.left div.social-bar {
+  div#left section.welcome div.social-bar {
     padding-top: 10px;
     padding-bottom: 8vh; }
-    div.left div.social-bar a i {
+    div#left section.welcome div.social-bar a i {
       color: #0b233d;
       margin: 0 5px;
       font-size: 22pt;
@@ -53,10 +54,10 @@ div.left {
       height: 48pt;
       width: 48pt;
       border-radius: 50%; }
-      div.left div.social-bar a i:hover {
+      div#left section.welcome div.social-bar a i:hover {
         color: #fff;
         background-color: #0b233d; }
-  div.left div.headshot {
+  div#left section.welcome div.headshot {
     width: 80%;
     height: 70vh;
     background: url("../img/derek.png");
@@ -64,9 +65,17 @@ div.left {
     background-repeat: no-repeat;
     background-position: center bottom; }
 
-/* RIGHT PORTION */
-div.right {
-  height: 100vh;
-  padding-left: 0px; }
+/* RIGHT SIDE */
+div#right div#menu {
+  position: absolute;
+  font-size: 200%;
+  line-height: 150%;
+  font-weight: 300; }
+  div#right div#menu .uk-subnav-pill > .uk-active > * {
+    background-color: #1E4875; }
+div#right section {
+  width: 80%;
+  margin-left: 35px;
+  font-size: 1.2em; }
 
 /*# sourceMappingURL=derek.css.map */
