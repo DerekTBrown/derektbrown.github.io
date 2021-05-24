@@ -42,7 +42,7 @@
 
      flex-direction: column;
      flex-wrap: nowrap;
-     justify-content:space-around;
+     justify-content:center;
      align-items:center;
 
      &.welcome{
@@ -83,24 +83,6 @@
            }
          }
        }
-
-       div.headshot{
-         width: 80%;
-         height:70vh;
-
-         background: url('../img/derek.png');
-         background-size: contain;
-         background-repeat: no-repeat;
-         background-position: center bottom;
-       }
-     }
-
-     section.background{
-
-     }
-
-     section.projects{
-       
      }
    }
 

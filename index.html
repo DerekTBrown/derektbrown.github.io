@@ -1,146 +1,128 @@
 <!DOCTYPE html>
 <html>
-  <head>
 
-    <!-- META -->
-    <title> Derek Brown </title>
-    <meta charset="UTF-8">
-    <meta name="description" content="Software Developer, Strategy Analyst">
-    <meta name="keywords" content="Derek,Brown,Carnegie Mellon, CMU,DerekTBrown">
-    <meta name="author" content="Derek Brown">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
 
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+  <!-- META -->
+  <title> Derek Brown </title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Software Developer, Strategy Analyst">
+  <meta name="keywords" content="Derek,Brown,Carnegie Mellon, CMU,DerekTBrown">
+  <meta name="author" content="Derek Brown">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- UIKit Import -->
-    <link type="text/css" rel="stylesheet" href="lib/uikit/css/uikit.min.css" />
-    <script type="text/javascript" src="lib/jquery/dist/jquery.min.js"></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
 
-    <!-- JQuery -->
-    <script type="text/javascript" src="lib/uikit/js/uikit.min.js" ></script>
+  <!-- UIKit Import -->
+  <link type="text/css" rel="stylesheet" href="lib/uikit/css/uikit.min.css" />
+  <script type="text/javascript" src="lib/jquery/dist/jquery.min.js"></script>
 
-    <!-- Styles Import -->
-    <link type="text/css" rel="stylesheet" href="css/derek.css" />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Shadows+Into+Light" rel="stylesheet">
+  <!-- JQuery -->
+  <script type="text/javascript" src="lib/uikit/js/uikit.min.js"></script>
 
-    <!-- Google Analytics -->
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  <!-- Styles Import -->
+  <link type="text/css" rel="stylesheet" href="css/derek.css" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Shadows+Into+Light" rel="stylesheet">
 
-      ga('create', 'UA-89794905-1', 'auto');
-      ga('send', 'pageview');
-    </script>
+  <!-- Google Analytics -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-    <!-- Download Resume Function -->
-    <script>
-      function downloadResume(){
-        window.open('DerekBrown_Resume.pdf','_blank','menubar=no,toolbar=no,location=no');
-        ga('send', {
-          hitType: 'event',
-          eventCategory: 'Resume',
-          eventAction: 'Download'
-        });
+    ga('create', 'UA-89794905-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+  <!-- Download Resume Function -->
+  <script>
+    function downloadResume() {
+      window.open('DerekBrown_Resume.pdf', '_blank', 'menubar=no,toolbar=no,location=no');
+      ga('send', {
+        hitType: 'event',
+        eventCategory: 'Resume',
+        eventAction: 'Download'
+      });
+    }
+  </script>
+
+  <!-- Modified Switcher -->
+  <script>
+    var prevTab = "";
+    function openTab(tab) {
+      if (tab !== prevTab) {
+        // Change uk-active
+        $("#menu > ul > li").removeClass("uk-active");
+        $("#menu > ul > li." + tab).addClass("uk-active");
+
+        // Change tabs
+        $("div#left > section, div#right > section").hide();
+        $("div#left > section." + tab + ",div#right > section." + tab).css('display', 'flex');
       }
-    </script>
+    }
+  </script>
 
-    <!-- Modified Switcher -->
-    <script>
-      var prevTab = "";
-      function openTab(tab){
-        if (tab !== prevTab){
-          // Change uk-active
-          $("#menu > ul > li").removeClass("uk-active");
-          $("#menu > ul > li."+tab).addClass("uk-active");
+</head>
 
-          // Change tabs
-          $("div#left > section, div#right > section").hide();
-          $("div#left > section."+tab+",div#right > section."+tab).css('display', 'flex');
-        }
-      }
-    </script>
+<body>
+  <div class="uk-grid">
+    <div id="left" class="uk-width-1-1 uk-width-large-1-2">
 
-  </head>
-  <body>
-    <div class="uk-grid">
-      <div id="left" class="uk-width-1-1 uk-width-large-1-2">
-
-        <!-- Welcome Class -->
-        <section class="welcome">
-          <div class="message">
-            <h1 style="color:#fff;">
-               Derek Brown
-            </h1>
-            <h2 style="color:#fff;" class="uk-visible-small">
-              Strategy Analyst <br>
-              <span style="font-size: 0.8em">and</span> <br>
-              Software Developer
-            </h2>
-            <h2 style="color:#fff;" class="uk-hidden-small">
-              Software Engineer
-            </h2>
-          </div>
-          <div class="social-bar">
-            <a href="https://www.linkedin.com/in/derektbrown"><i class="uk-icon-linkedin"></i></a>
-            <a href="https://github.com/DerekTBrown"><i class="uk-icon-github"></i></a>
-            <a href="https://twitter.com/dbrownianmotion"><i class="uk-icon-twitter"></i></a>
-            <a href="https://stackoverflow.com/users/6395388/derek-brown"><i class="uk-icon-stack-overflow"></i></a>
-            <a href="mailto:mail@derektbrown.com"><i class="uk-icon-envelope"></i></a>
-          </div>
-          <div class="headshot uk-hidden-small"></div>
-        </section>
-
-        <!-- Background Class -->
-
-        <!-- Projects Class -->
-
-
-      </div><!-- .left -->
-
-      <div id="right" class="uk-width-1-1 uk-width-large-1-2">
-
-        <!-- MENU -->
-        <div id="menu" class="uk-hidden">
-          <ul class="uk-subnav uk-subnav-pill" style="margin-top: 30px;" >
-              <li class="uk-active welcome"><a onClick="openTab('welcome')">Hello!</a></li>
-              <li class="background"><a onClick="openTab('background')">Background</a></li>
-              <li class="projects"><a onClick="openTab('projects')">Projects</a></li>
-          </ul>
+      <!-- Welcome Class -->
+      <section class="welcome">
+        <div class="message">
+          <h1 style="color:#fff;">
+            Derek Brown
+          </h1>
+          <h2 style="color:#fff;" class="uk-hidden-small">
+            Software Engineer
+          </h2>
         </div>
+        <div class="social-bar">
+          <a href="https://www.linkedin.com/in/derektbrown"><i class="uk-icon-linkedin"></i></a>
+          <a href="https://github.com/DerekTBrown"><i class="uk-icon-github"></i></a>
+          <a href="https://twitter.com/dbrownianmotion"><i class="uk-icon-twitter"></i></a>
+          <a href="https://stackoverflow.com/users/6395388/derek-brown"><i class="uk-icon-stack-overflow"></i></a>
+          <a href="mailto:mail@derektbrown.com"><i class="uk-icon-envelope"></i></a>
+        </div>
+      </section>
 
-        <!-- Welcome Class -->
-        <section class="welcome">
-          <div>
-            <h3>Hello!</h3>
-            I am a <b>Production Engineer</b> at <b>Facebook</b>, with  a passion for Software Engineering
-            and Architecture.  I currently work on the <b>Monitoring Team</b>; building
-            and maintaining Facebook's internal timeseries database, detection and 
-            alerting pipelines. Away from the keyboard, I am a Patent Agent, Rescue Diver, Amateur Radio Operator
-            and Beatboxer.
-            <br><br>
-            Nice to meet you!
-            <br><br>
-            <h2 style="font-size:180%; line-height:50%;">Derek</h2>
-            <br><br>
-            <!--
+      <!-- Background Class -->
+
+      <!-- Projects Class -->
+
+
+    </div><!-- .left -->
+
+    <div id="right" class="uk-width-1-1 uk-width-large-1-2">
+
+      <!-- Welcome Class -->
+      <section class="welcome">
+        <div>
+          <h3>Hello!</h3>
+          I am a <b>Production Engineer</b> at <b>Facebook</b>, with a passion for large-scale software systems.
+          I am also a <b>JD Candidate</b> at the <b>Seattle University School of Law</b>. Away from the keyboard, I am a patent agent,
+          rescue diver, amateur radio operator
+          and beatboxer.
+          <br><br>
+          Nice to meet you!
+          <br><br>
+          <h2 style="font-size:180%; line-height:50%;">Derek</h2>
+          <br><br>
+          <!--
             <button class="uk-button uk-button-large" type="button" onClick="downloadResume()"><i class="uk-icon-download"></i> &nbsp; RESUME</button>
             -->
-          </div>
-        </section>
+        </div>
+      </section>
 
-        <!-- Background Class -->
-        <section class="projects">
-          <div>
+    </div> <!-- .right -->
+  </div> <!-- .uk-grid -->
 
-          </div>
-        </section>
+</body>
 
-      </div> <!-- .right -->
-    </div> <!-- .uk-grid -->
-
-  </body>
 </html>
