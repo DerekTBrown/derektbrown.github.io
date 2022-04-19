@@ -1,0 +1,88 @@
+==================================================================
+https://keybase.io/derektbrown
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://derektbrown.com
+  * I am derektbrown (https://keybase.io/derektbrown) on keybase.
+  * I have a public key with fingerprint D180 A953 472D 0050 97A9  6F22 1461 F249 7642 5957
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120a13a167443d7b961a30c55c8b5e27950e512eb04b2bf45f4999fa0aea2f379c30a",
+      "fingerprint": "d180a953472d005097a96f221461f24976425957",
+      "host": "keybase.io",
+      "key_id": "1461f24976425957",
+      "kid": "010143cefc1cdd68f3fb10ec234eb495875ad0bd93d1b8a111d820e5a0982683d2190a",
+      "uid": "2b6cd4925d0aacd31cd9bc1af0fac119",
+      "username": "derektbrown"
+    },
+    "merkle_root": {
+      "ctime": 1650350253,
+      "hash_meta": "f7c0b7a44dc93d198f695108181ab2627c63462b675e21af85ba13098db074d9",
+      "seqno": 22320722
+    },
+    "revoke": {
+      "sig_ids": [
+        "f221b1a25b9a4ee06ee98ddda34523c4aa981469ce1d8a49ce15ccdf92fab4d80f"
+      ]
+    },
+    "service": {
+      "hostname": "derektbrown.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1650350270,
+  "expire_in": 157680000,
+  "prev": "7befa006ba79fe2e11bfc834f3452eda8db7c913916348aa9f797845d3f86bbb",
+  "seqno": 28,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.1.13
+Comment: https://keybase.io/crypto
+
+yMP6AnicbZN7bBRFHMev5WXPAkVrW3xU2KQ8pMLM7M7uTmNUKEoKSCApFKhyzOzO
+tkd7t9fda6EpRwkIyhuKUKQC1QCi0ZQmWnlIOVrA8lBMEMJLg6ApQXkIIpBY6mwj
+iVH3n8nufn/f3/f3mZmDvbv5/Amp9FZexahpBQnHWmLlPjZjanOVxGyzUsqpkkp4
+18JLTe5GAyVBU8qRAESAQplCVVMU2dQYUSGVgYGxoTPMkUYw4BgizoDCELMUbCmE
+EIsCyimyZI0YMqBStmQFw0XciTjBcFTYmlAHlGBZ0ZAJAAZEo0S1EIKKCi2kEE1V
+ECZYE4XFtutViHCMunx40BbfxEugK97/6B/mBlCRDW4Z0DBNVbdki0HADSQrnCkE
+6xqmJmAmkU3IdAohNHUkJqGA6EjVZRNB0pW7vMsOMdUwFYKwCSg1TFmYEmZAagGL
+GhAST+hyJ0xD3JuOO7wkyhx7dliKZUsh7pSU8oBj21GPrxENeiqoYiBjgLAsZqRu
+cSDEo1QUW5oBmEYVxTS8cES3VIIh0KEOKUMq0gxVVlQRSBP4RQIdM7FBIrbJgKaY
+XhSXl4VtKQchGQENIRHB4RV2Cfe6u8Eigc6VcgoljzeDFGFGqMI5UDkXLqZJZQUj
+2VAoJboATAwu4FDFW7FhmBZBFmWKqQNLeiPmdXMqgkaXubdX/2Uw3LBDIlXEsaO2
+YZeKn8XRaMTN8dhEKyOeejZngb99AiwYNsVhERUV3HGDdliwEsp/YdNAtsTnRIIO
+DwQ9BdZUHYjH68MrhKXGuDiFQGVUIxZHHEJmGbqsWN503KSCl2YQKBMoeOpiVksj
+mq5gU7Z0lTH2D466yEmLhKeAF6bRcodLsZYDr3f3Jfh9PXskerfI509KeXi3skv6
+dto0/xl/3VNfr/FfTh404VrH6JzKIy12eMmWxpPty+m+5i00beqJq7s3RYbVpT9S
+33rp40V3uue+nNXYNKMfnrt1cPo+/6YfVsERVW7kp4kooz5WNey1AvrBaLYsOaMH
+z2p7fMQAOHbLrAOrE0/Sxxa0geforbebrd/O/r7emNwU98dx3+mth3DHvev9Fq5/
+tuPwXunakV5p+Z01yRn9b1afH3+hoq08JZBU/v6Zsc6hg1Zh6/j4+UxnM/zw4vGG
+HSmjwxuTQ1l75sRWVu+HMLsx/u6206CP7uuV98WKmfNrU+ua3yq7vXNV/HJV3ZPy
+iVm7dt8Y+NmOB9t3PFq27ceNoTfH9JOLhiwf+0v8yv2zIz+6fg3PG5S67+7pMzcu
+JiTO/Xnd9nMT2ebe1W1TfLm97ucNWVPU2X503cDE+psXJs1TMzdvWLm0bMmmgixW
+mlnjW1DcsrY1kjA96f7zcst3+ZdvD00aWttSeGVxn9Svavu3089fatTcRZOSTh1Z
+uvZUet+0DvTKjCnd0r9dld6ZeWVB+wNfcmXh3lnzq13tXkrpuYwx+184IO2ZuXBl
+M07Pbjye37ziaJH2xHu5gcGfXEIbarce2x9oejqYcOdWwR+Lr/K0L2Ovxmd/nxfq
+ua0hadw752r+nDxk9bRvNhavO9mzSV1cf/iQMupYw93Oul9HGlvn1Qysa9g1bo49
+ofHFT88P2PkXIqX8rw==
+=eNi3
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/derektbrown
+
+==================================================================
