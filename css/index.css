@@ -26,25 +26,37 @@ div#wrap {
   flex-direction: column;
 }
 
+#menu {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
 #menu > .inner {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: center;
+  width: 100%;
   font-weight: 600;
 }
-#menu > .inner > div {
-  margin: 20px;
+@media (min-width: 800px) {
+  #menu > .inner {
+    max-width: 500px;
+  }
+}
+#menu > .inner > a {
+  flex: 1;
+  margin: 5px;
   padding: 10px;
   border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
 }
-#menu > .inner > div:hover, #menu > .inner > div.active {
+#menu > .inner > a:hover, #menu > .inner > a.active {
   cursor: pointer;
   color: #fff;
   background-color: #2098A6;
-}
-#menu > .inner > div > a {
-  text-decoration: none;
-  color: inherit;
 }
 
 #content {
@@ -62,7 +74,7 @@ div#wrap {
   justify-content: center;
   align-items: center;
 }
-@media (min-width: 1200px) {
+@media (min-width: 800px) {
   #content > section {
     max-width: 50%;
   }
@@ -84,6 +96,7 @@ section#profile div.profile-pic-container > img {
 }
 section#profile h1, section#profile h2 {
   margin: 0px;
+  text-align: center;
 }
 section#profile h1 {
   font-size: 3rem;
@@ -130,7 +143,8 @@ section#about > div > p.final {
 }
 
 section#investor {
-  margin: 20px;
+  box-sizing: border-box;
+  padding: 20px;
 }
 section#investor div.investments > div {
   display: flex;
@@ -158,6 +172,7 @@ section#investor div.investments > div > div.focus div.investments {
 }
 
 section#publications {
+  box-sizing: border-box;
   padding: 20px;
   width: 100%;
 }
@@ -171,6 +186,7 @@ section#publications .publication-list {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 20px;
 }
 section#publications .publication-item {
   width: 100%;
@@ -185,11 +201,6 @@ section#publications .publication-item h3.publication-name {
   font-size: 1.8em;
   font-weight: 500;
   margin-bottom: 5px;
-}
-section#publications .publication-item p.publication-title {
-  font-size: 1.5em;
-  font-weight: 400;
-  margin: 5px 0;
 }
 section#publications .publication-item p.publication-date {
   font-size: 1em;

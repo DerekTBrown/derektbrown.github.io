@@ -1,4 +1,6 @@
+$mobile-cutoff: 800px;
 $hover-color: #2098A6;
+
 
 body, html {
   // Margin clearfix
@@ -34,27 +36,37 @@ div#wrap {
     flex-direction: column;
 }
 
+#menu {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
 #menu > .inner {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: center;
+    width: 100%;
+    @media(min-width: $mobile-cutoff) {
+        max-width: 500px;
+    }
 
     font-weight: 600;
 
-    & > div {
-        margin: 20px;
+    & > a {
+        flex: 1;
+        margin: 5px;
         padding: 10px;
         border-radius: 5px;
+        text-align: center;
+
+        text-decoration: none;
+        color: inherit;
 
         &:hover, &.active {
             cursor: pointer;
             color: #fff;
             background-color: $hover-color;
-        }
-
-        & > a {
-            text-decoration: none;
-            color: inherit;
         }
     }
 }
@@ -70,7 +82,7 @@ div#wrap {
 
     & > section {
         flex-grow: 1;
-        @media (min-width: 1200px) {
+        @media(min-width: $mobile-cutoff) {
             max-width: 50%;
         }
 
@@ -102,6 +114,7 @@ section#profile {
 
     h1,h2 {
         margin: 0px;
+        text-align: center;
     }
 
     h1{
@@ -161,7 +174,8 @@ section#about {
 } 
 
 section#investor {
-    margin: 20px;
+    box-sizing: border-box;
+    padding: 20px;
 
     div.investments > div {
         display: flex;
@@ -194,6 +208,7 @@ section#investor {
 }
 
 section#publications {
+    box-sizing: border-box;
     padding: 20px;
     width: 100%;
 
@@ -208,6 +223,7 @@ section#publications {
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 20px;
     }
 
     .publication-item {

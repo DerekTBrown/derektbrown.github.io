@@ -55,7 +55,7 @@
             event.preventDefault();
 
             // Remove the active class from all menu items
-            var menuItems = document.getElementById("menu").getElementsByTagName("div");
+            var menuItems = document.getElementById("menu").getElementsByTagName("a");
             for (var i = 0; i < menuItems.length; i++) {
                 menuItems[i].classList.remove("active");
             }
@@ -63,21 +63,27 @@
             // Remove the selected class from all sections (except profile)
             var sections = document.getElementsByTagName("section");
             for (var i = 0; i < sections.length; i++) {
-                // If the id is "profile", skip it
-                if (sections[i].id == "profile") {
-                    continue;
-                }
                 sections[i].classList.remove("active");
             }
 
             // Enable the selected menu link on the parent div
-            elem.parentNode.classList.add("active");
+            elem.classList.add("active");
 
             // Parse the section id from the href
             var sectionToEnable = elem.getAttribute("href").replace("#", "");
 
             // Enable the selected section
             document.getElementById(sectionToEnable).classList.add("active");
+
+            // If the section id is "about", enable the profile section as well
+            if (sectionToEnable == "about") {
+                document.getElementById("profile").classList.add("active");
+            }
+
+            // If the screen is >800px enable the profile section
+            if (window.innerWidth > 800) {
+                document.getElementById("profile").classList.add("active");
+            }
         }
     </script>
 
@@ -86,10 +92,9 @@
     <div id="wrap">
         <div id="menu">
             <div class="inner">
-                <div class="active"><a href="#about" onclick="selectSection(this)">About Me</a></div>
-                <!-- <div><a href="" target="_blank">Attorney</a></div> -->
-                <div><a href="#investor" onclick="selectSection(this)">Investor</a></div>
-                <div><a href="#publications" onclick="selectSection(this)">Publications</a></div>
+                <a class="active" href="#about" onclick="selectSection(this)">About Me</a>
+                <a href="#investor" onclick="selectSection(this)">Investor</a>
+                <a href="#publications" onclick="selectSection(this)">Publications</a>
             </div>
         </div>
         <div id="content">
