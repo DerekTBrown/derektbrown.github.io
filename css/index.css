@@ -1,0 +1,214 @@
+body, html {
+  margin: 0;
+  background-color: #e7f1f2;
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+img.icon {
+  display: inline-block;
+  vertical-align: middle;
+  max-height: 1em;
+  max-width: 1em;
+  position: relative;
+  top: -0.1em;
+}
+
+div#wrap {
+  height: 100vh;
+  margin: 0 auto;
+  max-width: 1600px;
+  display: flex;
+  flex-direction: column;
+}
+
+#menu > .inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  font-weight: 600;
+}
+#menu > .inner > div {
+  margin: 20px;
+  padding: 10px;
+  border-radius: 5px;
+}
+#menu > .inner > div:hover, #menu > .inner > div.active {
+  cursor: pointer;
+  color: #fff;
+  background-color: #2098A6;
+}
+#menu > .inner > div > a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#content {
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
+}
+#content > section {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 1200px) {
+  #content > section {
+    max-width: 50%;
+  }
+}
+#content > section:not(.active) {
+  display: none;
+}
+
+section#profile div.profile-pic-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+section#profile div.profile-pic-container > img {
+  max-height: 80%;
+  max-width: 80%;
+}
+section#profile h1, section#profile h2 {
+  margin: 0px;
+}
+section#profile h1 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+section#profile h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  font-family: "Shadows Into Light", cursive;
+}
+section#profile div.social-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+section#profile div.social-links a {
+  display: block;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+}
+section#profile div.social-links a:hover {
+  background-color: #2098A6;
+}
+section#profile div.social-links a:hover > img {
+  filter: invert(1);
+}
+section#profile div.social-links a img {
+  width: 30px;
+  height: 30px;
+}
+
+section#about > div {
+  padding: 40px;
+  font-size: 1.5em;
+}
+section#about > div > p.hello {
+  margin: 10px 0;
+  font-size: 2em;
+  font-weight: 600;
+}
+section#about > div > p.final {
+  font-style: italic;
+}
+
+section#investor {
+  margin: 20px;
+}
+section#investor div.investments > div {
+  display: flex;
+  flex-direction: row;
+}
+section#investor div.investments > div > div.focus {
+  margin: 10px 0px;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+section#investor div.investments > div > div.focus h3 {
+  font-size: 2em;
+  margin: 5px;
+}
+section#investor div.investments > div > div.focus h3 a {
+  text-decoration: none;
+}
+section#investor div.investments > div > div.focus h3 > img {
+  font-size: 1.5em;
+}
+section#investor div.investments > div > div.focus div.investments {
+  margin: 10px 0px;
+}
+
+section#publications {
+  padding: 20px;
+  width: 100%;
+}
+section#publications h2 {
+  font-size: 2.5em;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+}
+section#publications .publication-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section#publications .publication-item {
+  width: 100%;
+  max-width: 800px;
+  background-color: #fff;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+section#publications .publication-item h3.publication-name {
+  font-size: 1.8em;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+section#publications .publication-item p.publication-title {
+  font-size: 1.5em;
+  font-weight: 400;
+  margin: 5px 0;
+}
+section#publications .publication-item p.publication-date {
+  font-size: 1em;
+  color: #999;
+  margin: 5px 0;
+}
+section#publications .publication-item p.publication-blurb {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+section#publications .publication-item a {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #2098A6;
+  text-decoration: none;
+}
+section#publications .publication-item a:hover {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=index.css.map */

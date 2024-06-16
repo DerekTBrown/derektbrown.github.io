@@ -1,0 +1,251 @@
+$hover-color: #2098A6;
+
+body, html {
+  // Margin clearfix
+  margin: 0;
+
+  // Background Color 
+  background-color: #e7f1f2;
+
+  // Fonts
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+img.icon {
+    display: inline-block;
+    vertical-align: middle;
+    max-height: 1em;
+    max-width: 1em;
+    position: relative;
+    top: -0.1em;
+}
+
+div#wrap {
+    height: 100vh;
+    margin: 0 auto;
+    max-width: 1600px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#menu > .inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    font-weight: 600;
+
+    & > div {
+        margin: 20px;
+        padding: 10px;
+        border-radius: 5px;
+
+        &:hover, &.active {
+            cursor: pointer;
+            color: #fff;
+            background-color: $hover-color;
+        }
+
+        & > a {
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+}
+
+#content {
+    width: 100%;
+    flex-grow: 1;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+
+    & > section {
+        flex-grow: 1;
+        @media (min-width: 1200px) {
+            max-width: 50%;
+        }
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &:not(.active){
+            display: none;
+        }
+    }
+}
+
+section#profile {
+    div.profile-pic-container {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        & > img {
+            max-height: 80%;
+            max-width: 80%;
+        }
+    }
+
+    h1,h2 {
+        margin: 0px;
+    }
+
+    h1{
+        font-size: 3rem;
+        font-weight: 600;
+    }
+
+    h2 {
+        font-size: 2rem;
+        font-weight: 400;
+        font-family: "Shadows Into Light", cursive;
+    }
+
+    div.social-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        
+        a {
+            display: block;
+            border-radius: 50%;
+            padding: 15px;
+            margin: 10px;
+
+            &:hover{
+                background-color: $hover-color;
+
+                & > img {
+                    filter: invert(1);
+                }
+            }
+    
+            img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+}
+
+section#about {
+    & > div {
+        padding: 40px;
+        font-size: 1.5em;
+
+        & > p.hello {
+            margin: 10px 0;
+            font-size: 2em;
+            font-weight: 600;
+        }
+
+
+        & > p.final {
+            font-style: italic;
+        }
+    }
+} 
+
+section#investor {
+    margin: 20px;
+
+    div.investments > div {
+        display: flex;
+        flex-direction: row;
+
+        & > div.focus {
+            margin: 10px 0px;
+            padding: 20px;
+            border-radius: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+            h3 {
+                font-size: 2em;
+                margin: 5px;
+
+                a {
+                    text-decoration: none;
+                }
+                & > img {
+                    font-size: 1.5em;
+                }
+            }
+
+            div.investments {
+                margin: 10px 0px;
+            }
+        }
+    }
+}
+
+section#publications {
+    padding: 20px;
+    width: 100%;
+
+    h2 {
+        font-size: 2.5em;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .publication-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .publication-item {
+        width: 100%;
+        max-width: 800px;
+        background-color: #fff;
+        padding: 20px;
+        margin: 10px 0;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+        h3.publication-name {
+            font-size: 1.8em;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        p.publication-date {
+            font-size: 1em;
+            color: #999;
+            margin: 5px 0;
+        }
+
+        p.publication-blurb {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 1.2em;
+            color: $hover-color;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
